@@ -1,21 +1,75 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PropTypes from 'prop-types';
+
+import { getCanvasPosition } from './utils/formulas';
+import Canvas from './components/Canvas';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.shoot = this.shoot.bind(this);
+  }
+
+  componentDidMount() {
+    const self = this;
+
+    setInterval(() => {
+      self.props.moveObjects(self.canvasMousePosition);
+    }, 10);
+
+    window.onresize = () => {
+      const cnv = document.getElementById('aliens-go-home-canvas');
+      cnv.style.width = `${window.innerWidth}px`;
+      cnv.style.height = `${window.innerHeight}px`;
+    };
+    window.onresize();
+  }
+
+  trackMouse(event) {
+    this.canvasMousePosition = getCanvasPosition(event);
+  }
+
+  shoot() {
+    this.props.shoot(this.canvasMousePosition);
+  }
+
   render() {
+    const { angle, gameState, startGame } = this.props;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Canvas
+        angle={angle}
+        gameState={gameState}
+        shoot={this.shoot}
+        startGame={startGame}
+        trackMouse={event => this.trackMouse(event)}
+      />
     );
   }
 }
+
+App.propTypes = {
+  angle: PropTypes.number.isRequired,
+  gameState: PropTypes.shape({
+    flyingObjects: PropTypes.arrayOf(
+      PropTypes.shape({
+        position: PropTypes.shape({
+          x: PropTypes.number.isRequired,
+          y: PropTypes.number.isRequired,
+        }).isRequired,
+        id: PropTypes.number.isRequired,
+      }),
+    ).isRequired,
+    kills: PropTypes.number.isRequired,
+    lives: PropTypes.number.isRequired,
+    started: PropTypes.bool.isRequired,
+  }).isRequired,
+  leaderboardLoaded: PropTypes.func.isRequired,
+  loggedIn: PropTypes.func.isRequired,
+  moveObjects: PropTypes.func.isRequired,
+  shoot: PropTypes.func.isRequired,
+  startGame: PropTypes.func.isRequired,
+};
 
 export default App;
