@@ -30,6 +30,10 @@ class App extends Component {
     this.canvasMousePosition = getCanvasPosition(event);
   }
 
+  redirectTo(url) {
+    window.open(url, "_blank");
+  }
+
   shoot() {
     this.props.shoot(this.canvasMousePosition);
   }
@@ -41,6 +45,7 @@ class App extends Component {
       <Canvas
         angle={angle}
         gameState={gameState}
+        redirectTo={this.redirectTo}
         shoot={this.shoot}
         startGame={startGame}
         trackMouse={event => this.trackMouse(event)}
