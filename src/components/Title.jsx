@@ -9,41 +9,21 @@ const Title = () => {
     fill: '#cbca62',
   };
 
-  const aliensLineCurve = {
+  const TitleLineCurve = {
     initialAxis: {
-      x: -190,
-      y: -950,
+      x: -550,
+      y: -800,
     },
     initialControlPoint: {
-      x: 95,
-      y: -50,
+      x: 200,
+      y: -200,
     },
     endingControlPoint: {
-      x: 285,
-      y: -50,
+      x: 800,
+      y: -200,
     },
     endingAxis: {
-      x: 380,
-      y: 0,
-    },
-  };
-
-  const goHomeLineCurve = {
-    ...aliensLineCurve,
-    initialAxis: {
-      x: -250,
-      y: -780,
-    },
-    initialControlPoint: {
-      x: 125,
-      y: -90,
-    },
-    endingControlPoint: {
-      x: 375,
-      y: -90,
-    },
-    endingAxis: {
-      x: 500,
+      x: 1150,
       y: 0,
     },
   };
@@ -51,14 +31,10 @@ const Title = () => {
   return (
     <g filter="url(#shadow)">
       <defs>
-        <path id="AliensPath" d={pathFromBezierCurve(aliensLineCurve)} />
-        <path id="GoHomePath" d={pathFromBezierCurve(goHomeLineCurve)} />
+        <path id="TitlePath" d={pathFromBezierCurve(TitleLineCurve)} />
       </defs>
       <text {...textStyle}>
-        <textPath xlinkHref="#AliensPath">Aliens,</textPath>
-      </text>
-      <text {...textStyle}>
-        <textPath xlinkHref="#GoHomePath">Go Home!</textPath>
+        <textPath xlinkHref="#TitlePath">Mikel Garcia Urbina</textPath>
       </text>
     </g>
   );
