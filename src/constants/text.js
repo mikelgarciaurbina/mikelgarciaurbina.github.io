@@ -6,5 +6,6 @@ export default {
     CV: 'Curriculum Vitae',
     GITHUB: 'GitHub',
     HISTORY: 'History!',
+    LINKEDIN: 'LinkedIn',
   },
 };
