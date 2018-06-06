@@ -51,7 +51,7 @@ const Canvas = ({ angle, auth, gameState, shoot, startGame, trackMouse }) => {
       <CurrentScore score={gameState.kills} />
       {!gameState.started && (
         <g>
-          <Button onClick={startGame} y={230} />
+          <Button label="Tap To Start!" onClick={startGame} y={230} />
           <Title />
         </g>
       )}
