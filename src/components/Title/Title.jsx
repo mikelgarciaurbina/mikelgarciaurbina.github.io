@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { pathFromBezierCurve } from '../utils/formulas';
+import { pathFromBezierCurve } from '../../utils/formulas';
 
 const Title = () => {
   const textStyle = {
