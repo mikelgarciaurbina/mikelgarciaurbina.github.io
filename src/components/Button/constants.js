@@ -1,14 +1,22 @@
 import { gameWidth } from '../../utils/constants';
 
-export const buttonProps = {
+export const buttonSecondaryProps = {
   x: gameWidth / -2,
   width: gameWidth,
   height: 120,
   rx: 10, // border radius
   ry: 10, // border radius
   style: {
-    fill: '#da0d15',
+    fill: 'transparent',
     cursor: 'pointer',
+  },
+};
+
+export const buttonPrimaryProps = {
+  ...buttonSecondaryProps,
+  style: {
+    ...buttonSecondaryProps.style,
+    fill: '#da0d15',
   },
 };
 
