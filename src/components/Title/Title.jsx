@@ -2,16 +2,12 @@ import React from 'react';
 
 import { T } from '../../constants';
 import { pathFromBezierCurve } from '../../utils/formulas';
+import styles from './styles';
 
 const { TITLE } = T.COMPONENTS;
+const { textStyle } = styles;
 
 const Title = () => {
-  const textStyle = {
-    fontFamily: '"Joti One", cursive',
-    fontSize: 120,
-    fill: '#cbca62',
-  };
-
   const TitleLineCurve = {
     initialAxis: {
       x: -550,
