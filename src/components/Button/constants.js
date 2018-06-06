@@ -7,7 +7,7 @@ export const buttonProps = {
   rx: 10, // border radius
   ry: 10, // border radius
   style: {
-    fill: 'transparent',
+    fill: '#da0d15',
     cursor: 'pointer',
   },
 };

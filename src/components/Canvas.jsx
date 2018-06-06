@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { T } from '../constants';
 import CannonBall from './CannonBall';
 import CannonBase from './CannonBase';
 import CannonPipe from './CannonPipe';
@@ -10,6 +11,8 @@ import Ground from './Ground';
 import Heart from './Heart';
 import Sky from './Sky';
 import { Button, Title } from './';
+
+const { HISTORY } = T.MENU;
 
 const Canvas = ({ angle, auth, gameState, shoot, startGame, trackMouse }) => {
   const gameHeight = 1200;
@@ -51,7 +54,7 @@ const Canvas = ({ angle, auth, gameState, shoot, startGame, trackMouse }) => {
       <CurrentScore score={gameState.kills} />
       {!gameState.started && (
         <g>
-          <Button label="Tap To Start!" onClick={startGame} y={230} />
+          <Button label={HISTORY} onClick={startGame} y={780} />
           <Title />
         </g>
       )}
