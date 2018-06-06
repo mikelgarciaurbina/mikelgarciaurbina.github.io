@@ -65,8 +65,6 @@ App.propTypes = {
     lives: PropTypes.number.isRequired,
     started: PropTypes.bool.isRequired,
   }).isRequired,
-  leaderboardLoaded: PropTypes.func.isRequired,
-  loggedIn: PropTypes.func.isRequired,
   moveObjects: PropTypes.func.isRequired,
   shoot: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired,
