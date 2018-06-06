@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { gameWidth } from '../utils/constants';
+import { gameWidth } from '../../utils/constants';
 
-const StartGame = ({ onClick }) => {
+const Button = ({ onClick }) => {
   const button = {
     x: gameWidth / -2, // half width
     y: -280, // minus means up (above 0)
@@ -39,8 +39,8 @@ const StartGame = ({ onClick }) => {
   );
 };
 
-StartGame.propTypes = {
+Button.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
-export default StartGame;
+export default Button;

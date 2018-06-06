@@ -9,8 +9,7 @@ import FlyingObject from './FlyingObject';
 import Ground from './Ground';
 import Heart from './Heart';
 import Sky from './Sky';
-import StartGame from './StartGame';
-import { Title } from './';
+import { Button, Title } from './';
 
 const Canvas = ({ angle, auth, gameState, shoot, startGame, trackMouse }) => {
   const gameHeight = 1200;
@@ -52,7 +51,7 @@ const Canvas = ({ angle, auth, gameState, shoot, startGame, trackMouse }) => {
       <CurrentScore score={gameState.kills} />
       {!gameState.started && (
         <g>
-          <StartGame onClick={() => startGame()} />
+          <Button onClick={() => startGame()} />
           <Title />
         </g>
       )}
