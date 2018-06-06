@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { T } from '../constants';
+import { C, T } from '../constants';
 import CannonBall from './CannonBall';
 import CannonBase from './CannonBase';
 import CannonPipe from './CannonPipe';
@@ -12,9 +12,11 @@ import Heart from './Heart';
 import Sky from './Sky';
 import { Button, Title } from './';
 
-const { HISTORY } = T.MENU;
+const { CURRICULUM } = C.URLS;
+const { CV, HISTORY } = T.MENU;
 
-const Canvas = ({ angle, auth, gameState, shoot, startGame, trackMouse }) => {
+const Canvas = props => {
+  const { angle, gameState, redirectTo, shoot, startGame, trackMouse } = props;
   const gameHeight = 1200;
   const viewBox = [
     window.innerWidth / -2,
@@ -54,7 +56,8 @@ const Canvas = ({ angle, auth, gameState, shoot, startGame, trackMouse }) => {
       <CurrentScore score={gameState.kills} />
       {!gameState.started && (
         <g>
-          <Button label={HISTORY} onClick={startGame} y={780} />
+          <Button label={HISTORY} onClick={startGame} primary y={780} />
+          <Button label={CV} onClick={() => redirectTo(CURRICULUM)} y={500} />
           <Title />
         </g>
       )}
@@ -86,6 +89,7 @@ Canvas.propTypes = {
     lives: PropTypes.number.isRequired,
     started: PropTypes.bool.isRequired,
   }).isRequired,
+  redirectTo: PropTypes.func.isRequired,
   shoot: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired,
   trackMouse: PropTypes.func.isRequired,

@@ -3,6 +3,7 @@ export default {
     TITLE: 'Mikel Garcia Urbina',
   },
   MENU: {
-    HISTORY: 'History!'
-  }
+    CV: 'Curriculum Vitae',
+    HISTORY: 'History!',
+  },
 };
