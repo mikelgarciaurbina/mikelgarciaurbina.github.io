@@ -12,8 +12,8 @@ import Heart from './Heart';
 import Sky from './Sky';
 import { Button, Title } from './';
 
-const { CURRICULUM } = C.URLS;
-const { CV, HISTORY } = T.MENU;
+const { CURRICULUM, GIT } = C.URLS;
+const { CV, GITHUB, HISTORY } = T.MENU;
 
 const Canvas = props => {
   const { angle, gameState, redirectTo, shoot, startGame, trackMouse } = props;
@@ -57,7 +57,8 @@ const Canvas = props => {
       {!gameState.started && (
         <g>
           <Button label={HISTORY} onClick={startGame} primary y={780} />
-          <Button label={CV} onClick={() => redirectTo(CURRICULUM)} y={500} />
+          <Button label={GITHUB} onClick={() => redirectTo(GIT)} y={500} />
+          <Button label={CV} onClick={() => redirectTo(CURRICULUM)} y={250} />
           <Title />
         </g>
       )}

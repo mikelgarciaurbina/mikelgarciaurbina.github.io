@@ -4,6 +4,7 @@ export default {
   },
   MENU: {
     CV: 'Curriculum Vitae',
+    GITHUB: 'GitHub',
     HISTORY: 'History!',
   },
 };
