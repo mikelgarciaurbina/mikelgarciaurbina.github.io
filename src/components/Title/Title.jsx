@@ -1,6 +1,9 @@
 import React from 'react';
 
+import { T } from '../../constants';
 import { pathFromBezierCurve } from '../../utils/formulas';
+
+const { TITLE } = T.COMPONENTS;
 
 const Title = () => {
   const textStyle = {
@@ -34,7 +37,7 @@ const Title = () => {
         <path id="TitlePath" d={pathFromBezierCurve(TitleLineCurve)} />
       </defs>
       <text {...textStyle}>
-        <textPath xlinkHref="#TitlePath">Mikel Garcia Urbina</textPath>
+        <textPath xlinkHref="#TitlePath">{TITLE}</textPath>
       </text>
     </g>
   );
