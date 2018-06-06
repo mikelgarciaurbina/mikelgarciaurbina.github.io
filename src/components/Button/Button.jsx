@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import { buttonProps, textProps } from './constants';
 
-const Button = ({ onClick }) => (
+const Button = ({ onClick, y }) => (
   <g filter="url(#shadow)">
-    <rect {...buttonProps} onClick={onClick} />
-    <text {...textProps} onClick={onClick}>
+    <rect {...buttonProps} onClick={onClick} y={-y} />
+    <text {...textProps} onClick={onClick} y={-(y-80)}>
       Tap To Start!
     </text>
   </g>
@@ -14,6 +14,7 @@ const Button = ({ onClick }) => (
 
 Button.propTypes = {
   onClick: PropTypes.func.isRequired,
+  y: PropTypes.number.isRequired,
 };
 
 export default Button;
