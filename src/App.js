@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { getCanvasPosition } from './utils/formulas';
+import { F } from './constants';
 import Canvas from './components/Canvas';
+
+const { getCanvasPosition } = F;
 
 class App extends Component {
   constructor(props) {
