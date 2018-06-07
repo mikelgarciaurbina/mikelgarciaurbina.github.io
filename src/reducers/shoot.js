@@ -1,4 +1,6 @@
-import { calculateAngle } from '../utils/formulas';
+import { F } from '../constants';
+
+const { calculateAngle } = F;
 
 function shoot(state, action) {
   if (!state.gameState.started) return state;
