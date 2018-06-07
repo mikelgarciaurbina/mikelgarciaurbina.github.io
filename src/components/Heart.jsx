@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { pathFromBezierCurve } from '../utils/formulas';
+import { F } from '../constants';
+
+const { pathFromBezierCurve } = F;
 
 const Heart = ({ position }) => {
   const heartStyle = {
