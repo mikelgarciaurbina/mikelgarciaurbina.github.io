@@ -1,5 +1,8 @@
 import React from 'react';
-import { pathFromBezierCurve } from '../utils/formulas';
+
+import { F } from '../constants';
+
+const { pathFromBezierCurve } = F;
 
 const CannonBase = props => {
   const cannonBaseStyle = {
