@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { T } from '../../constants';
+import { F, T } from '../../constants';
 import { TitleLineCurve } from './constants';
-import { pathFromBezierCurve } from '../../utils/formulas';
 import styles from './styles';
 
 const { TITLE } = T.COMPONENTS;
+const { pathFromBezierCurve } = F;
 const { textStyle } = styles;
 
 const Title = () => (
