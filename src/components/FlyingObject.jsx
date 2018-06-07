@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
+import { C } from '../constants';
 import FlyingObjectBase from './FlyingObjectBase';
 import FlyingObjectTop from './FlyingObjectTop';
-import { gameHeight } from '../utils/constants';
+
+const { GAME_HEIGHT } = C;
 
 const moveVertically = keyframes`
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(${gameHeight}px);
+    transform: translateY(${GAME_HEIGHT}px);
   }
 `;
 
