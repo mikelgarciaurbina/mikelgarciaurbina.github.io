@@ -1,8 +1,10 @@
-import { gameWidth } from '../../utils/constants';
+import { C } from '../../constants';
+
+const { GAME_WIDTH } = C;
 
 export const buttonSecondaryProps = {
-  x: gameWidth / -2,
-  width: gameWidth,
+  x: GAME_WIDTH  / -2,
+  width: GAME_WIDTH ,
   height: 120,
   rx: 10, // border radius
   ry: 10, // border radius
