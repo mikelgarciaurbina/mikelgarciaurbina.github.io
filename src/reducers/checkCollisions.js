@@ -1,5 +1,7 @@
+import { C } from '../constants';
 import { checkCollision } from '../utils/formulas';
-import { gameHeight } from '../utils/constants';
+
+const { GAME_HEIGHT } = C;
 
 const checkCollisions = (cannonBalls, flyingDiscs) => {
   const objectsDestroyed = [];
@@ -8,7 +10,7 @@ const checkCollisions = (cannonBalls, flyingDiscs) => {
     const currentLifeTime = new Date().getTime() - flyingDisc.createdAt;
     const calculatedPosition = {
       x: flyingDisc.position.x,
-      y: flyingDisc.position.y + currentLifeTime / 4000 * gameHeight,
+      y: flyingDisc.position.y + currentLifeTime / 4000 * GAME_HEIGHT,
     };
     const rectA = {
       x1: calculatedPosition.x - 40,
