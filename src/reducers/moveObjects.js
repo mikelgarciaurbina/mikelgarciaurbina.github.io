@@ -1,7 +1,9 @@
-import { calculateAngle } from '../utils/formulas';
+import { F } from '../constants';
 import checkCollisions from './checkCollisions';
 import createFlyingObjects from './createFlyingObjects';
 import moveBalls from './moveCannonBalls';
+
+const { calculateAngle } = F;
 
 function moveObjects(state, action) {
   if (!state.gameState.started) return state;
