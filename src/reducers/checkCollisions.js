@@ -1,7 +1,7 @@
-import { C } from '../constants';
-import { checkCollision } from '../utils/formulas';
+import { C, F } from '../constants';
 
 const { GAME_HEIGHT } = C;
+const { checkCollision } = F;
 
 const checkCollisions = (cannonBalls, flyingDiscs) => {
   const objectsDestroyed = [];
