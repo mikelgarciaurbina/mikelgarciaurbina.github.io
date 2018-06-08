@@ -6,9 +6,8 @@ import CannonPipe from './CannonPipe';
 import CurrentScore from './CurrentScore';
 import Ground from './Ground';
 import Heart from './Heart';
-import ReactJS from './ReactJS';
 import Sky from './Sky';
-import { Button, CannonBall, CannonBase, Title } from './';
+import { Button, CannonBall, CannonBase, ReactJS, Title } from './';
 
 const { CURRICULUM, GIT, LINK } = C.URLS;
 const { CV, GITHUB, HISTORY, LINKEDIN } = T.MENU;
@@ -63,10 +62,7 @@ const Canvas = props => {
       )}
       {gameState.started &&
         gameState.flyingObjects.map(flyingObject => (
-          <ReactJS
-            key={flyingObject.id}
-            position={flyingObject.position}
-          />
+          <ReactJS key={flyingObject.id} position={flyingObject.position} />
         ))}
       {lives}
     </svg>
