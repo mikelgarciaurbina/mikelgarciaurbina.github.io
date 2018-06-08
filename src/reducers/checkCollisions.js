@@ -14,9 +14,9 @@ const checkCollisions = (cannonBalls, flyingDiscs) => {
     };
     const rectA = {
       x1: calculatedPosition.x - 40,
-      y1: calculatedPosition.y - 10,
+      y1: calculatedPosition.y - 40,
       x2: calculatedPosition.x + 40,
-      y2: calculatedPosition.y + 10,
+      y2: calculatedPosition.y + 40,
     };
 
     cannonBalls.forEach(cannonBall => {
