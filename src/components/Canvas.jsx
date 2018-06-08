@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { C, T } from '../constants';
-import CannonBall from './CannonBall';
 import CannonBase from './CannonBase';
 import CannonPipe from './CannonPipe';
 import CurrentScore from './CurrentScore';
@@ -10,7 +9,7 @@ import FlyingObject from './FlyingObject';
 import Ground from './Ground';
 import Heart from './Heart';
 import Sky from './Sky';
-import { Button, Title } from './';
+import { Button, CannonBall, Title } from './';
 
 const { CURRICULUM, GIT, LINK } = C.URLS;
 const { CV, GITHUB, HISTORY, LINKEDIN } = T.MENU;
