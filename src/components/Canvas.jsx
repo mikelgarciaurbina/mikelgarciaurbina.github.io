@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { C, T } from '../constants';
 import CannonPipe from './CannonPipe';
 import CurrentScore from './CurrentScore';
-import FlyingObject from './FlyingObject';
 import Ground from './Ground';
 import Heart from './Heart';
+import ReactJS from './ReactJS';
 import Sky from './Sky';
 import { Button, CannonBall, CannonBase, Title } from './';
 
@@ -63,7 +63,7 @@ const Canvas = props => {
       )}
       {gameState.started &&
         gameState.flyingObjects.map(flyingObject => (
-          <FlyingObject
+          <ReactJS
             key={flyingObject.id}
             position={flyingObject.position}
           />
