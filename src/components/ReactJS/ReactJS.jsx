@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
 
-import { C } from '../constants';
-import { Move } from './';
+import { Move } from '../';
+import constants from './constants';
 
-const halfWidthAndHeight = 40;
+const { halfWidthAndHeight } = constants;
 
 const ReactJS = ({ position }) => (
   <Move>
