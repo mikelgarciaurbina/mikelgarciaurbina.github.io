@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { F } from '../constants';
+import { F } from '../../constants';
 
 const { pathFromBezierCurve } = F;
 
