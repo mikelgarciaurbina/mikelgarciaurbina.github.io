@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { F } from '../constants';
+import { F } from '../../constants';
 
 const { pathFromBezierCurve } = F;
 
