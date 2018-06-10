@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { C, T } from '../constants';
-import Heart from './Heart';
 import Sky from './Sky';
 import {
   Button,
@@ -11,6 +10,7 @@ import {
   CannonPipe,
   CurrentScore,
   Ground,
+  Heart,
   ReactJS,
   Title,
 } from './';
