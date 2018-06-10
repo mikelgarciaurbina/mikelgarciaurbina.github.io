@@ -2,49 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { F } from '../../constants';
+import constants from './constants';
 import styles from './styles';
 
 const { pathFromBezierCurve } = F;
+const { getHeart } = constants;
 const { heartStyle } = styles;
 
 const Heart = ({ position }) => {
-  const leftSide = {
-    initialAxis: {
-      x: position.x,
-      y: position.y,
-    },
-    initialControlPoint: {
-      x: -20,
-      y: -20,
-    },
-    endingControlPoint: {
-      x: -40,
-      y: 10,
-    },
-    endingAxis: {
-      x: 0,
-      y: 40,
-    },
-  };
-
-  const rightSide = {
-    initialAxis: {
-      x: position.x,
-      y: position.y,
-    },
-    initialControlPoint: {
-      x: 20,
-      y: -20,
-    },
-    endingControlPoint: {
-      x: 40,
-      y: 10,
-    },
-    endingAxis: {
-      x: 0,
-      y: 40,
-    },
-  };
+  const { leftSide, rightSide } = getHeart(position);
 
   return (
     <g filter="url(#shadow)">
