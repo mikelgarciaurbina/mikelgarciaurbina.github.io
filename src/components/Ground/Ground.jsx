@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { C } from '../constants';
+import { C } from '../../constants';
 
 const { SKY_AND_GROUND_WIDTH } = C;
 
