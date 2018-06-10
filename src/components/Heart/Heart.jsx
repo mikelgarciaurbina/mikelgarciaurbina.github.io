@@ -2,16 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { F } from '../../constants';
+import styles from './styles';
 
 const { pathFromBezierCurve } = F;
+const { heartStyle } = styles;
 
 const Heart = ({ position }) => {
-  const heartStyle = {
-    fill: '#da0d15',
-    stroke: '#a51708',
-    strokeWidth: '2px',
-  };
-
   const leftSide = {
     initialAxis: {
       x: position.x,
