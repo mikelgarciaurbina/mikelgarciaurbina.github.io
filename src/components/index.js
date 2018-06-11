@@ -7,4 +7,5 @@ export { default as Ground } from './Ground';
 export { default as Heart } from './Heart';
 export { default as Move } from './Move';
 export { default as ReactJS } from './ReactJS';
+export { default as Sky } from './Sky';
 export { default as Title } from './Title';

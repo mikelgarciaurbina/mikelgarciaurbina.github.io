@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { C } from '../constants';
+import { C } from '../../constants';
 
 const { GAME_HEIGHT, SKY_AND_GROUND_WIDTH } = C;
 
